@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Richard - Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <!-- Font Awesome for social icons -->
+    <style>
+        /* Reset some default styles */
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+        }
+
+        /* Header styles */
+        .header {
+            background-color: #000;
+            color: white;
+            padding: 20px;
+            text-align: left;
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 10%;
+        }
+
+        .nav-links {
+            list-style: none;
+            padding: 0;
+        }
+
+        .nav-links li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            font-weight: normal;
+        }
+
+        #logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        /* Portfolio styles */
+        .portfolio-title {
+            font-size: 2em;
+            text-align: center;
+            padding: 20px;
+            color: #000000;
+            /* If you want the title color to match the logo color */
+            font-weight: bold;
+            /* Makes the font weight bold */
+        }
+
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            /* This centers the gallery */
+            padding: 20px;
+        }
+
+
+        .gallery-image {
+            display: block;
+            /* This makes the image a block-level element, which respects margin auto */
+            max-width: 100%;
+            /* This makes sure the image is not bigger than its container */
+            margin: auto;
+            /* This centers the image in the grid cell if it's smaller than the cell */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: 0.3s;
+        }
+
+
+        .gallery-image:hover {
+            opacity: 0.8;
+        }
+
+        /* Sticky footer styles */
+        .content-wrap {
+            display: block;
+            /* This ensures the content wrap is block level */
+            min-height: calc(100vh - 420px);
+            /* Adjust if needed */
+            padding-bottom: 160px;
+            /* Same as the footer's total height */
+        }
+
+
+        /* Footer styles */
+        .footer {
+            background-color: #000;
+            color: white;
+            padding: 40px 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: space-around;
+            align-items: top;
+        }
+
+        .footer-column h3 {
+            color: #fff;
+            margin-bottom: 20px;
+        }
+
+        .footer-column p,
+        .footer-column a {
+            color: #aaa;
+            text-decoration: none;
+            margin-bottom: 10px;
+        }
+
+        .footer-column a:hover {
+            color: #fff;
+        }
+
+        .social-icons a {
+            color: #aaa;
+            margin: 0 10px;
+            font-size: 1.2em;
+        }
+
+        .social-icons a:hover {
+            color: #fff;
+        }
+
+        .footer-bottom {
+            background-color: #111;
+            color: #aaa;
+            text-align: center;
+            padding: 50px 0;
+            font-size: 0.8em;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="content-wrap">
+        <!-- Header -->
+        <header class="header">
+            <div class="navigation">
+                <div id="logo">Richard Liao</div>
+                <nav>
+                    <ul class="nav-links">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="../Portfolio/index.html">Portfolio</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Portfolio Gallery -->
+        <div class="portfolio-title">Portfolio</div>
+        <div class="gallery">
+            <!-- Portfolio images -->
+            <a href="../UniquePlatform/index.html"><img src="image1.jpg" alt="Unique Platform"
+                    class="gallery-image"></a>
+            <a href="#" target="_blank"><img src="image2.jpg" alt="Magic Phantom Realm" class="gallery-image"></a>
+            <a href="#" target="_blank"><img src="image3.jpg" alt="Endless Runner" class="gallery-image"></a>
+            <a href="#" target="_blank"><img src="image4.jpg" alt="IEnergy Bracer" class="gallery-image"></a>
+            <a href="#" target="_blank"><img src="image5.jpg" alt="VR Escape Game" class="gallery-image"></a>
+            <!-- Add more images if needed -->
+            <!-- Replace # with your actual URLs and image files -->
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-bottom">
+            © MINCHIH Portfolio 2024
+        </div>
+    </footer>
+
+</body>
+
+</html>

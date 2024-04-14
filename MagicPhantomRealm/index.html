@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VIRTUE - Portfolio</title>
+    <title>Richard - Portfolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <!-- Font Awesome for social icons -->
     <style>
@@ -63,33 +63,6 @@
         }
 
 
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            grid-gap: 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-            /* This centers the gallery */
-            padding: 20px;
-        }
-
-
-        .gallery-image {
-            display: block;
-            /* This makes the image a block-level element, which respects margin auto */
-            max-width: 100%;
-            /* This makes sure the image is not bigger than its container */
-            margin: auto;
-            /* This centers the image in the grid cell if it's smaller than the cell */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: 0.3s;
-        }
-
-
-        .gallery-image:hover {
-            opacity: 0.8;
-        }
-
         /* Sticky footer styles */
         .content-wrap {
             display: block;
@@ -142,11 +115,12 @@
             background-color: #111;
             color: #aaa;
             text-align: center;
-            padding: 20px 0;
+            padding: 50px 0;
             font-size: 0.8em;
             position: absolute;
             bottom: 0;
             width: 100%;
+            font-size: 18px;
         }
     </style>
 </head>
@@ -161,53 +135,20 @@
                 <nav>
                     <ul class="nav-links">
                         <li><a href="#">Home</a></li>
-                        <li><a href="#">Portfolio</a></li>
+                        <li><a href="../Portfolio/index.html">Portfolio</a></li>
                     </ul>
                 </nav>
             </div>
         </header>
 
-        <!-- Portfolio Gallery -->
-        <div class="portfolio-title">Portfolio</div>
-        <div class="gallery">
-            <!-- Portfolio images -->
-            <a href="#" target="_blank"><img src="image1.jpg" alt="Unique Platform" class="gallery-image"></a>
-            <a href="#" target="_blank"><img src="image2.jpg" alt="Magic Phantom Realm" class="gallery-image"></a>
-            <a href="#" target="_blank"><img src="image3.jpg" alt="Endless Runner" class="gallery-image"></a>
-            <a href="#" target="_blank"><img src="image4.jpg" alt="IEnergy Bracer" class="gallery-image"></a>
-            <a href="#" target="_blank"><img src="image5.jpg" alt="VR Escape Game" class="gallery-image"></a>
-            <!-- Add more images if needed -->
-            <!-- Replace # with your actual URLs and image files -->
-        </div>
-    </div>
 
-    <!-- Footer -->
-    <footer>
-        <div class="footer">
-            <div class="footer-column">
-                <h3>ABOUT US</h3>
-                <p>This is some dummy copy. You're not really supposed to read this dummy copy, it is just a place
-                    holder for people who need some type to visualize.</p>
+
+        <!-- Footer -->
+        <footer>
+            <div class="footer-bottom">
+                © MINCHIH Portfolio 2024
             </div>
-            <div class="footer-column">
-                <h3>OUR ADDRESS</h3>
-                <p>146 W 29th St,<br>New York, NY 10011</p>
-                <a href="mailto:contact@example.com">Contact us</a>
-            </div>
-            <div class="footer-column social-icons">
-                <h3>FOLLOW US</h3>
-                <p>Stay in touch with us</p>
-                <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
-                <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
-                <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
-                <!-- Add more social links as needed -->
-            </div>
-        </div>
-        <div class="footer-bottom">
-            2024<br>
-        </div>
-    </footer>
+        </footer>
 
 </body>
 

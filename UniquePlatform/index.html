@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Richard - Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <!-- Font Awesome for social icons -->
+    <style>
+        /* Reset some default styles */
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+        }
+
+        /* Header styles */
+        .header {
+            background-color: #000;
+            color: white;
+            padding: 20px;
+            text-align: left;
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 10%;
+        }
+
+        .nav-links {
+            list-style: none;
+            padding: 0;
+        }
+
+        .nav-links li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            font-weight: normal;
+        }
+
+        #logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        /* Portfolio styles */
+        .portfolio-title {
+            font-size: 2em;
+            text-align: center;
+            padding: 20px;
+            color: #000000;
+            /* If you want the title color to match the logo color */
+            font-weight: bold;
+            /* Makes the font weight bold */
+        }
+
+
+        /* Sticky footer styles */
+        .content-wrap {
+            display: block;
+            /* This ensures the content wrap is block level */
+            min-height: calc(100vh - 420px);
+            /* Adjust if needed */
+            padding-bottom: 160px;
+            /* Same as the footer's total height */
+        }
+
+        .project-title {
+            font-size: 2em;
+            text-align: center;
+            padding: 20px;
+            color: #000;
+            font-weight: bold;
+        }
+
+        .project-image {
+            width: 100%;
+            /* Full width of the page */
+            height: auto;
+            /* Maintain aspect ratio */
+            background-color: #f0f0f0;
+            /* Placeholder color */
+            display: block;
+            margin: 20px 0;
+        }
+
+        .project-link {
+            display: block;
+            text-align: center;
+            margin: 20px 0;
+            font-size: 1.2em;
+        }
+
+        .project-overview {
+            padding: 20px;
+            font-size: 1em;
+            line-height: 1.6;
+            text-align: left;
+            margin: 20px 10%;
+        }
+
+        /* Footer styles */
+        .footer {
+            background-color: #000;
+            color: white;
+            padding: 40px 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: space-around;
+            align-items: top;
+        }
+
+        .footer-column h3 {
+            color: #fff;
+            margin-bottom: 20px;
+        }
+
+        .footer-column p,
+        .footer-column a {
+            color: #aaa;
+            text-decoration: none;
+            margin-bottom: 10px;
+        }
+
+        .footer-column a:hover {
+            color: #fff;
+        }
+
+        .social-icons a {
+            color: #aaa;
+            margin: 0 10px;
+            font-size: 1.2em;
+        }
+
+        .social-icons a:hover {
+            color: #fff;
+        }
+
+        .footer-bottom {
+            background-color: #111;
+            color: #aaa;
+            text-align: center;
+            padding: 50px 0;
+            font-size: 0.8em;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="content-wrap">
+        <!-- Header -->
+        <header class="header">
+            <div class="navigation">
+                <div id="logo">Richard Liao</div>
+                <nav>
+                    <ul class="nav-links">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="../Portfolio/index.html">Portfolio</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+
+        <!-- Project Details -->
+        <div class="project-title">Unique Platform</div>
+        <div class="project-image">
+            <!-- Placeholder for future image -->
+            <img src="path_to_your_image.jpg" alt="Description of Image" style="width:100%; height:auto;">
+        </div>
+        <a href="https://github.com/yourusername/unique-platform" target="_blank" class="project-link">
+            Visit the GitHub Project
+        </a>
+        <div class="project-overview">
+            <h3>Project Overview:</h3>
+            Developed a versatile 2D game engine and accompanying platform in C++, incorporating SFML for graphics and
+            ImGui for user interfaces. The platform currently runs a Space Shooter game, showcasing the engine’s robust
+            capabilities.
+            <h3>Objective:</h3>
+            To gain a deeper understanding of game engine construction and to advance my C++ skills, focusing on core
+            functionalities and planning to enhance graphic rendering with OpenGL.
+            <h3>Development Breakdown:</h3>
+            <ul>
+                <li>Phase 1 - Engine and Platform Development:
+                    <ul>
+                        <li>Implemented foundational graphics rendering, input management, and dynamic UIs.</li>
+                        <li>Created a game platform that supports game launching, progress tracking, and score
+                            management.</li>
+                    </ul>
+                </li>
+                <li>Phase 2 - Ongoing:
+                    <ul>
+                        <li>Developing an advanced rendering system using OpenGL to improve visual performance.</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-bottom">
+            © MINCHIH Portfolio 2024
+        </div>
+    </footer>
+
+</body>
+
+</html>
