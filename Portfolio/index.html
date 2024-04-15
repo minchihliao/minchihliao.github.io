@@ -66,23 +66,47 @@
         .gallery {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
+            /* Keep the grid setup */
             grid-gap: 20px;
             max-width: 1200px;
             margin: 0 auto;
-            /* This centers the gallery */
             padding: 20px;
+            align-items: start;
+            /* Ensures all items align at their tops if they have different heights */
         }
 
 
         .gallery-image {
+            width: 100%;
+            /* Ensure width is consistent */
+            height: auto;
+            /* Height is automatic, might need adjustment */
             display: block;
-            /* This makes the image a block-level element, which respects margin auto */
-            max-width: 100%;
-            /* This makes sure the image is not bigger than its container */
             margin: auto;
-            /* This centers the image in the grid cell if it's smaller than the cell */
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             transition: 0.3s;
+        }
+
+        /* Additional CSS to set a consistent aspect ratio or height */
+        .image-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            overflow: hidden;
+            /* Hide overflow to maintain aspect ratio */
+            height: 200px;
+            /* Set a fixed height for each container */
+        }
+
+        .image-container img {
+            width: 100%;
+            /* Full width of the container */
+            min-height: 100%;
+            /* Minimum height to cover the container */
+            object-fit: cover;
+            /* Cover the area without distorting the aspect ratio */
+            object-position: center;
+            /* Center the image within the container */
         }
 
 
@@ -172,12 +196,15 @@
         <div class="portfolio-title">Portfolio</div>
         <div class="gallery">
             <!-- Portfolio images -->
-            <a href="../UniquePlatform/index.html"><img src="image1.jpg" alt="Unique Platform"
+            <a href="../UniquePlatform/index.html"><img src="assets/Platform_Logo.jpg" alt="Unique Platform"
                     class="gallery-image"></a>
-            <a href="#" target="_blank"><img src="image2.jpg" alt="Magic Phantom Realm" class="gallery-image"></a>
-            <a href="#" target="_blank"><img src="image3.jpg" alt="Endless Runner" class="gallery-image"></a>
-            <a href="#" target="_blank"><img src="image4.jpg" alt="IEnergy Bracer" class="gallery-image"></a>
-            <a href="#" target="_blank"><img src="image5.jpg" alt="VR Escape Game" class="gallery-image"></a>
+            <a href="../MagicPhantomRealm/index.html"><img src="assets/MagicPhantomRealm.jpg" alt="Magic Phantom Realm"
+                    class="gallery-image"></a>
+            <a href="#" target="_blank"><img src="assets/EndlessRunner.jpg" alt="Endless Runner"
+                    class="gallery-image"></a>
+            <a href="#" target="_blank"><img src="assets/EnergyBracer.JPG" alt="Energy Bracer"
+                    class="gallery-image"></a>
+            <a href="#" target="_blank"><img src="assets/EscapeGame.jpg" alt="VR Escape Game" class="gallery-image"></a>
             <!-- Add more images if needed -->
             <!-- Replace # with your actual URLs and image files -->
         </div>
