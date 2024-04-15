@@ -11,8 +11,15 @@
         /* Reset some default styles */
         html,
         body {
-            height: 100%;
             margin: 0;
+            padding: 0;
+            min-height: 100%;
+            /* Ensure the full height for smaller content */
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
         }
 
         /* Header styles */
@@ -63,18 +70,14 @@
         }
 
 
-        /* Sticky footer styles */
         .content-wrap {
-            display: block;
-            /* This ensures the content wrap is block level */
-            min-height: calc(100vh - 420px);
-            /* Adjust if needed */
-            padding-bottom: 160px;
-            /* Same as the footer's total height */
+            flex: 1;
+            padding-bottom: 50px;
+            /* Add padding equal to the footer height to avoid content being hidden by the footer */
         }
 
         .project-title {
-            font-size: 2em;
+            font-size: 4em;
             text-align: center;
             padding: 20px;
             color: #000;
@@ -82,14 +85,30 @@
         }
 
         .project-image {
+            display: flex;
+            justify-content: center;
+            /* Center images horizontally */
+            flex-wrap: wrap;
+            /* Allow wrapping */
+            margin: 5px 0;
+        }
+
+        .image-container {
+            width: 25%;
+            /* Set container width */
+            padding: 10px;
+            /* Padding around each image */
+            box-sizing: border-box;
+            /* Include padding in width calculation */
+            text-align: center;
+            /* Center the text below images */
+        }
+
+        .image-container img {
             width: 100%;
-            /* Full width of the page */
+            /* Make images use up all container width */
             height: auto;
             /* Maintain aspect ratio */
-            background-color: #f0f0f0;
-            /* Placeholder color */
-            display: block;
-            margin: 20px 0;
         }
 
         .project-link {
@@ -99,12 +118,37 @@
             font-size: 1.2em;
         }
 
+        .project-overview ul li {
+            margin-bottom: 2px;
+            /* Reduced bottom margin for list items */
+            padding: 3px 0;
+            /* Small padding for better readability */
+        }
+
+        .project-overview ul {
+            margin-top: 0px;
+            /* Remove top margin to bring list closer to the preceding content */
+            margin-bottom: 5px;
+            /* Bottom margin to space out from the following content */
+            padding-left: 40px;
+            /* Adjust list indentation */
+        }
+
+        .project-overview h3 {
+            margin-top: 10px;
+            /* Add top margin if needed */
+            margin-bottom: 10px;
+            /* Reduced bottom margin */
+            font-size: 1.2em;
+            /* Adjust font size if desired */
+        }
+
         .project-overview {
             padding: 20px;
-            font-size: 1em;
-            line-height: 1.6;
+            font-size: 1.2em;
+            line-height: 1.4;
             text-align: left;
-            margin: 20px 10%;
+            margin: 5px 8%;
         }
 
         /* Footer styles */
@@ -149,11 +193,8 @@
             color: #aaa;
             text-align: center;
             padding: 50px 0;
-            font-size: 0.8em;
-            position: absolute;
-            bottom: 0;
-            width: 100%;
             font-size: 18px;
+            width: 100%;
         }
     </style>
 </head>
@@ -178,10 +219,24 @@
         <!-- Project Details -->
         <div class="project-title">Unique Platform</div>
         <div class="project-image">
-            <!-- Placeholder for future image -->
-            <img src="path_to_your_image.jpg" alt="Description of Image" style="width:100%; height:auto;">
+            <div class="image-container">
+                <img src="../UniquePlatform/assets/Platform_Logo.jpg" alt="Platform Start Screen">
+                <div>Platform Start Screen</div>
+            </div>
+            <div class="image-container">
+                <img src="../UniquePlatform/assets/Platform_Game.jpg" alt="Platform Game">
+                <div>Platform Game</div>
+            </div>
+            <div class="image-container">
+                <img src="../UniquePlatform/assets/SpaceShooter_Game.jpg" alt="Space Shooter Game Screen">
+                <div>Space Shooter Game Screen</div>
+            </div>
+            <div class="image-container">
+                <img src="../UniquePlatform/assets/SpaceShooter_Result.jpg" alt="Space Shooter Game Over">
+                <div>Space Shooter Game Over</div>
+            </div>
         </div>
-        <a href="https://github.com/yourusername/unique-platform" target="_blank" class="project-link">
+        <a href="https://github.com/minchihliao/unique-platform" target="_blank" class="project-link">
             Visit the GitHub Project
         </a>
         <div class="project-overview">
@@ -206,6 +261,65 @@
                         <li>Developing an advanced rendering system using OpenGL to improve visual performance.</li>
                     </ul>
                 </li>
+            </ul>
+            <h3>Challenges and Solutions:</h3>
+            <ul>
+                1. Integration of SFML and ImGui
+                <ul>
+                    Problem
+                    <ul>
+                        Integrating SFML and ImGui posed significant challenges due to their distinct rendering
+                        processes and lifecycle management. The primary issue was ensuring that the rendering
+                        and event handling of both systems did not interfere with each other.
+                    </ul>
+                    Solution
+                    <ul>
+                        I developed a multi-layer rendering system within our game engine that manages different
+                        rendering layers independently. This approach allows SFML and ImGui to function
+                        seamlessly without compromising performance or complexity.
+                    </ul>
+                    Technical Implementation
+                    <ul>
+                        <li>LayerStack Management: Introduced a LayerStack class to control the order of rendering
+                            and
+                            event propagation across different layers, enhancing flexibility.</li>
+                    </ul>
+                    <ul>
+                        <li>Event Dispatching: Implemented an event dispatcher to handle and route events
+                            efficiently,
+                            tailored to the needs of different layers.</li>
+                    </ul>
+                    <ul>
+                        <li>Consistent Timing: Utilized a timing mechanism to maintain consistent game speed across
+                            varying processing rates.</li>
+                    </ul>
+                </ul>
+
+                2. Custom Renderer for Future Graphics API Transition
+                <ul>
+                    Problem
+                    <ul>
+                        While SFML is great for rapid development and 2D graphics, its capabilities are limited for
+                        advanced 3D rendering. Anticipating the need for enhanced graphics performance, a transition to
+                        a more powerful graphics library like OpenGL was considered essential.
+                    </ul>
+                    Solution
+                    <ul>
+                        I designed a custom renderer with an abstract interface layer between SFML and the game logic.
+                        This abstraction facilitates easy swapping of the rendering technology without affecting the
+                        rest of the application.
+                    </ul>
+                    Technical Implementation
+                    <ul>
+                        <li>Abstract Rendering Interface: Defined a set of rendering operations that encapsulate all
+                            graphics activities, making the underlying graphics library easily interchangeable.</li>
+                    </ul>
+                    <ul>
+                        <li>Flexibility for Future Upgrades: The design allows straightforward integration of OpenGL or
+                            other rendering technologies by merely adapting the rendering layer.</li>
+                    </ul>
+                </ul>
+
             </ul>
         </div>
     </div>
