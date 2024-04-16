@@ -11,8 +11,15 @@
         /* Reset some default styles */
         html,
         body {
-            height: 100%;
             margin: 0;
+            padding: 0;
+            min-height: 100%;
+            /* Ensure the full height for smaller content */
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
         }
 
         /* Header styles */
@@ -63,16 +70,88 @@
         }
 
 
-        /* Sticky footer styles */
         .content-wrap {
-            display: block;
-            /* This ensures the content wrap is block level */
-            min-height: calc(100vh - 420px);
-            /* Adjust if needed */
-            padding-bottom: 160px;
-            /* Same as the footer's total height */
+            flex: 1;
+            padding-bottom: 50px;
+            /* Add padding equal to the footer height to avoid content being hidden by the footer */
         }
 
+        .project-title {
+            font-size: 4em;
+            text-align: center;
+            padding: 20px;
+            color: #000;
+            font-weight: bold;
+        }
+
+        .project-image {
+            display: flex;
+            justify-content: center;
+            /* Center images horizontally */
+            flex-wrap: wrap;
+            /* Allow wrapping */
+            margin: 5px 0;
+        }
+
+        .image-container {
+            width: 100%;
+            /* Set container width */
+            padding: 10px;
+            /* Padding around each image */
+            box-sizing: border-box;
+            /* Include padding in width calculation */
+            text-align: center;
+            /* Center the text below images */
+        }
+
+        .image-container img {
+            width: 90%;
+            /* Make images use up all container width */
+            height: auto;
+            /* Maintain aspect ratio */
+        }
+
+        .project-link {
+            display: block;
+            text-align: center;
+            margin: 20px 0;
+            font-size: 1.2em;
+        }
+
+        .project-overview ul li {
+            margin-top: 2px;
+            margin-bottom: 2px;
+            /* Reduced bottom margin for list items */
+            padding: 3px 0;
+            /* Small padding for better readability */
+        }
+
+        .project-overview ul {
+            margin-top: 2px;
+            /* Remove top margin to bring list closer to the preceding content */
+            margin-bottom: 5px;
+            /* Bottom margin to space out from the following content */
+            padding-left: 40px;
+            /* Adjust list indentation */
+        }
+
+        .project-overview h3 {
+            margin-top: 10px;
+            /* Add top margin if needed */
+            margin-bottom: 10px;
+            /* Reduced bottom margin */
+            font-size: 1.2em;
+            /* Adjust font size if desired */
+        }
+
+        .project-overview {
+            padding: 20px;
+            font-size: 1.2em;
+            line-height: 1.4;
+            text-align: left;
+            margin: 5px 8%;
+            margin-top: 1px;
+        }
 
         /* Footer styles */
         .footer {
@@ -101,26 +180,13 @@
             color: #fff;
         }
 
-        .social-icons a {
-            color: #aaa;
-            margin: 0 10px;
-            font-size: 1.2em;
-        }
-
-        .social-icons a:hover {
-            color: #fff;
-        }
-
         .footer-bottom {
             background-color: #111;
             color: #aaa;
             text-align: center;
             padding: 50px 0;
-            font-size: 0.8em;
-            position: absolute;
-            bottom: 0;
-            width: 100%;
             font-size: 18px;
+            width: 100%;
         }
     </style>
 </head>
@@ -142,13 +208,135 @@
         </header>
 
 
-
-        <!-- Footer -->
-        <footer>
-            <div class="footer-bottom">
-                © MINCHIH Portfolio 2024
+        <!-- Project Details -->
+        <div class="project-title">Magic Phantom Realm</div>
+        <div class="project-image">
+            <div class="image-container">
+                <img src="../MagicPhantomRealm/assets/MagicPhantomRealm.jpg" alt="Platform Start Screen">
             </div>
-        </footer>
+        </div>
+        <a href="https://www.youtube.com/watch?v=KZ-yCHOKHwA" target="_blank" class="project-link">
+            Visit the YouTube Video
+        </a>
+        <div class="project-overview">
+            <h3>Project Overview:</h3>
+            Phantom Realms is a mobile game designed for players aged 15 and above, featuring a layer-based adventure
+            structure reminiscent of Slay the Spire. Players enhance their character's abilities through unique events
+            to triumph over various monsters.
+            <h3>Technical Framework:</h3>
+            <li>Development Tools: Built in Unity, integrating multiple third-party databases for enhanced data
+                management.</li>
+            <li>Asynchronous Operations: Utilized UniTask for handling asynchronous events such as data downloads and
+                animation sequences, ensuring smooth gameplay and interface responsiveness.</li>
+            <li>Reactive Programming: Implemented UniRx for dynamic data observation, allowing for real-time UI updates
+                based on user data changes.</li>
+            <li>Architecture: Employed a Finite State Machine (FSM) for clearer and more manageable game flow
+                development,
+                alongside MVC architecture to optimize UI control and application performance.</li>
+            <h3>My Role and Contributions:</h3>
+            <li>Event and Gameplay Programming:
+                <ul>
+                    Developed features across several game systems including class selection, level progression, and
+                    rewards. Implemented skills and item purchasing mechanics, integrating player data with
+                    server-side communications.
+                </ul>
+            </li>
+            <li>UI/UX Design and Animation:
+                <ul>
+                    Applied MVC architecture principles to design a clean, modular UI script structure that separates
+                    data access, control, and display. Utilized DoTween and UniTask for efficient animations.
+                </ul>
+            </li>
+            <li>Integration of Third-Party Tools:
+                <ul>
+                    Used SDK functions for mock server interactions and Google Sheets for item data retrieval and
+                    updates, enhancing game performance and scalability.
+                </ul>
+            </li>
+
+            <li>Cross-functional Collaboration:
+                <ul>
+                    Collaborated with artists and UI designers to ensure a cohesive game aesthetic, aligning technical
+                    functionality with artistic vision.
+                </ul>
+            </li>
+
+
+
+            <h3>Challenges and Solutions:</h3>
+            <li>
+                Efficiently Structuring Game UI
+                <ul>
+                    Problem
+                    <ul>
+                        The initial UI was cumbersome and made it difficult for players to navigate through various game
+                        features like skill selection and skill level up.
+                    </ul>
+                    Solution
+                    <ul>
+                        Applied the MVC architectural pattern to redesign the UI, creating a clear separation between
+                        data, view, and controller. This reorganization allowed for more modular and maintainable code,
+                        making future updates easier to implement.
+                    </ul>
+                    Impact
+                    <ul>
+                        The new UI design improved user engagement and made the interface more intuitive, which
+                        helped in increasing the player retention rate and satisfaction.
+                    </ul>
+                </ul>
+            </li>
+            <li>
+                Efficient Data Retrieval from Google Sheets for Item Management
+                <ul>
+                    Problem
+                    <ul>
+                        A key challenge in the game development was ensuring efficient retrieval and integration of item
+                        data from Google Sheets into the game, which was crucial for the item acquisition feature.
+                    </ul>
+                    Solution
+                    <ul>
+                        <li>Data Retrieval Implementation: Collaborated in the integration process by specifying how
+                            item
+                            data should be retrieved from Google Sheets. This involved defining the data access methods
+                            and
+                            ensuring that the retrieved data was correctly formatted and synchronized with the game's
+                            existing item management system.</li>
+                        <li>Item Data Structure Definition: Worked on defining the data structure that stores
+                            information
+                            about player-acquired items in the game, ensuring it supported efficient access and
+                            manipulation
+                            during gameplay.</li>
+                        <li>Mock Server Utilization: Assisted in setting up and defining how a mock server would
+                            simulate
+                            the retrieval and storage of item data, crucial for testing the system's robustness and
+                            response
+                            under various scenarios.</li>
+                    </ul>
+                    Impact
+                    <ul>
+                        <li>The precise definition of data retrieval methods from Google Sheets enabled seamless and
+                            error-free updates to item data, enhancing the game's ability to introduce new items without
+                            extensive downtime or manual intervention.</li>
+                        <li>The well-defined item data structure ensured that players experienced minimal latency and
+                            high reliability when accessing and using items in the game, leading to improved gameplay
+                            satisfaction.</li>
+                        <li>The use of a mock server for testing the integration allowed the development team to
+                            identify and address potential issues early in the development cycle, reducing the risk of
+                            bugs and ensuring a smooth rollout of the item acquisition feature.</li>
+                    </ul>
+                </ul>
+            </li>
+
+            </ul>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-bottom">
+            © MINCHIH Portfolio 2024
+        </div>
+    </footer>
 
 </body>
 
