@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Richard - Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <!-- Font Awesome for social icons -->
+    <style>
+        /* Reset some default styles */
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100%;
+            /* Ensure the full height for smaller content */
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Header styles */
+        .header {
+            background-color: #000;
+            color: white;
+            padding: 20px;
+            text-align: left;
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 10%;
+        }
+
+        .nav-links {
+            list-style: none;
+            padding: 0;
+        }
+
+        .nav-links li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            font-weight: normal;
+        }
+
+        #logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        /* Portfolio styles */
+        .portfolio-title {
+            font-size: 2em;
+            text-align: center;
+            padding: 20px;
+            color: #000000;
+            /* If you want the title color to match the logo color */
+            font-weight: bold;
+            /* Makes the font weight bold */
+        }
+
+
+        .content-wrap {
+            flex: 1;
+            padding-bottom: 50px;
+            /* Add padding equal to the footer height to avoid content being hidden by the footer */
+        }
+
+        .project-title {
+            font-size: 4em;
+            text-align: center;
+            padding: 20px;
+            color: #000;
+            font-weight: bold;
+        }
+
+        .project-image {
+            display: flex;
+            justify-content: center;
+            /* Center images horizontally */
+            flex-wrap: wrap;
+            /* Allow wrapping */
+            margin: 5px 0;
+        }
+
+        .image-container {
+            width: 100%;
+            /* Set container width */
+            padding: 10px;
+            /* Padding around each image */
+            box-sizing: border-box;
+            /* Include padding in width calculation */
+            text-align: center;
+            /* Center the text below images */
+        }
+
+        .image-container img {
+            width: 90%;
+            /* Make images use up all container width */
+            height: auto;
+            /* Maintain aspect ratio */
+        }
+
+        .project-link {
+            display: block;
+            text-align: center;
+            margin: 20px 0;
+            font-size: 1.2em;
+        }
+
+        .project-overview ul li {
+            margin-top: 2px;
+            margin-bottom: 2px;
+            /* Reduced bottom margin for list items */
+            padding: 3px 0;
+            /* Small padding for better readability */
+        }
+
+        .project-overview ul {
+            margin-top: 2px;
+            /* Remove top margin to bring list closer to the preceding content */
+            margin-bottom: 5px;
+            /* Bottom margin to space out from the following content */
+            padding-left: 40px;
+            /* Adjust list indentation */
+        }
+
+        .project-overview h3 {
+            margin-top: 10px;
+            /* Add top margin if needed */
+            margin-bottom: 10px;
+            /* Reduced bottom margin */
+            font-size: 1.2em;
+            /* Adjust font size if desired */
+        }
+
+        .project-overview {
+            padding: 20px;
+            font-size: 1.2em;
+            line-height: 1.4;
+            text-align: left;
+            margin: 5px 8%;
+            margin-top: 1px;
+        }
+
+        /* Footer styles */
+        .footer {
+            background-color: #000;
+            color: white;
+            padding: 40px 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: space-around;
+            align-items: top;
+        }
+
+        .footer-column h3 {
+            color: #fff;
+            margin-bottom: 20px;
+        }
+
+        .footer-column p,
+        .footer-column a {
+            color: #aaa;
+            text-decoration: none;
+            margin-bottom: 10px;
+        }
+
+        .footer-column a:hover {
+            color: #fff;
+        }
+
+        .footer-bottom {
+            background-color: #111;
+            color: #aaa;
+            text-align: center;
+            padding: 50px 0;
+            font-size: 18px;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="content-wrap">
+        <!-- Header -->
+        <header class="header">
+            <div class="navigation">
+                <div id="logo">Richard Liao</div>
+                <nav>
+                    <ul class="nav-links">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="../Portfolio/index.html">Portfolio</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+
+        <!-- Project Details -->
+        <div class="project-title">Endless Runner</div>
+        <div class="project-image">
+            <video controls width="60%">
+                <source src="../EndlessRunner/assets/EndlessRunnerVideo.mkv" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <a href="https://www.youtube.com/watch?v=KZ-yCHOKHwA" target="_blank" class="project-link">
+            Visit the YouTube Video
+        </a>
+        <div class="project-overview">
+            <h3>Project Overview</h3>
+            In this project, I single-handedly developed an endless runner game using Unreal Engine 5, leveraging the
+            powerful Blueprint visual scripting system. The game challenges players with a fast-paced, obstacle-laden
+            environment where they must use quick reflexes to dodge obstacles and collect items for score enhancement.
+            <h3>Objective</h3>
+            To demonstrate proficiency in Unreal Engine and Blueprint scripting through the development of an
+            endless runner game.
+            <h3>Key Features</h3>
+            <li>Game Mechanics
+                <ul>
+                    Implemented using Unreal 5 to enable dynamic lateral movements, jumps, and turns allowing players to
+                    navigate through obstacles and strive for high scores.
+                </ul>
+            </li>
+            <li>Road Generation System
+                <ul>
+                    Developed a customizable road generation tool within Unreal, empowering level designers to easily
+                    create varied path designs tailored to gameplay needs, including complex bends and T-junctions.
+                </ul>
+            </li>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-bottom">
+            © MINCHIH Portfolio 2024
+        </div>
+    </footer>
+
+</body>
+
+</html>
