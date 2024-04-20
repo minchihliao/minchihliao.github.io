@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Richard - Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <!-- Font Awesome for social icons -->
+    <style>
+        /* Reset some default styles */
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100%;
+            /* Ensure the full height for smaller content */
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Header styles */
+        .header {
+            background-color: #000;
+            color: white;
+            padding: 20px;
+            text-align: left;
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 10%;
+        }
+
+        .nav-links {
+            list-style: none;
+            padding: 0;
+        }
+
+        .nav-links li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            font-weight: normal;
+        }
+
+        #logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        /* Portfolio styles */
+        .portfolio-title {
+            font-size: 2em;
+            text-align: center;
+            padding: 20px;
+            color: #000000;
+            /* If you want the title color to match the logo color */
+            font-weight: bold;
+            /* Makes the font weight bold */
+        }
+
+
+        .content-wrap {
+            flex: 1;
+            padding-bottom: 50px;
+            /* Add padding equal to the footer height to avoid content being hidden by the footer */
+        }
+
+        .project-title {
+            font-size: 4em;
+            text-align: center;
+            padding: 20px;
+            color: #000;
+            font-weight: bold;
+        }
+
+        .project-image {
+            display: flex;
+            justify-content: center;
+            /* Center images horizontally */
+            flex-wrap: wrap;
+            /* Allow wrapping */
+            margin: 5px 0;
+        }
+
+        .image-container {
+            width: 90%;
+            /* Set container width */
+            padding: 10px;
+            /* Padding around each image */
+            box-sizing: border-box;
+            /* Include padding in width calculation */
+            text-align: center;
+            /* Center the text below images */
+        }
+
+        .image-container img {
+            width: 90%;
+            /* Make images use up all container width */
+            height: auto;
+            /* Maintain aspect ratio */
+        }
+
+        .project-link {
+            display: block;
+            text-align: center;
+            margin: 20px 0;
+            font-size: 1.2em;
+        }
+
+        .project-overview ul li {
+            margin-top: 2px;
+            margin-bottom: 2px;
+            /* Reduced bottom margin for list items */
+            padding: 3px 0;
+            /* Small padding for better readability */
+        }
+
+        .project-overview ul {
+            margin-top: 2px;
+            /* Remove top margin to bring list closer to the preceding content */
+            margin-bottom: 5px;
+            /* Bottom margin to space out from the following content */
+            padding-left: 40px;
+            /* Adjust list indentation */
+        }
+
+        .project-overview h3 {
+            margin-top: 10px;
+            /* Add top margin if needed */
+            margin-bottom: 10px;
+            /* Reduced bottom margin */
+            font-size: 1.2em;
+            /* Adjust font size if desired */
+        }
+
+        .project-overview {
+            padding: 20px;
+            font-size: 1.2em;
+            line-height: 1.4;
+            text-align: left;
+            margin: 5px 8%;
+            margin-top: 1px;
+        }
+
+        /* Footer styles */
+        .footer {
+            background-color: #000;
+            color: white;
+            padding: 40px 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: space-around;
+            align-items: top;
+        }
+
+        .footer-column h3 {
+            color: #fff;
+            margin-bottom: 20px;
+        }
+
+        .footer-column p,
+        .footer-column a {
+            color: #aaa;
+            text-decoration: none;
+            margin-bottom: 10px;
+        }
+
+        .footer-column a:hover {
+            color: #fff;
+        }
+
+        .footer-bottom {
+            background-color: #111;
+            color: #aaa;
+            text-align: center;
+            padding: 50px 0;
+            font-size: 18px;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="content-wrap">
+        <!-- Header -->
+        <header class="header">
+            <div class="navigation">
+                <div id="logo">Richard Liao</div>
+                <nav>
+                    <ul class="nav-links">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="../Portfolio/index.html">Portfolio</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+
+        <!-- Project Details -->
+        <div class="project-title">VR Escape Game</div>
+        <div class="project-image">
+            <div class="image-container">
+                <img src="../EnergyBracer/assets/EnergyBracer.jpg" alt="Platform Start Screen">
+            </div>
+        </div>
+        <a href="https://youtu.be/_9RWdG2iA6s" target="_blank" class="project-link">
+            Visit the YouTube Video
+        </a>
+        <div class="project-overview">
+            <h3>Project Overview</h3>
+            This VR game casts players as a superhero navigating through a space prison. The objective is to escape by
+            using ropes to move around and an energy gun to defeat enemies. The game’s unique selling point is its use
+            of a dual haptic feedback system, which enhances the immersive experience:
+            <li>Right-hand device
+                <ul>Simulates energy gun charging using an inflatable module and provides an
+                    electrocution effect through an electrotherapy device for combat scenarios.
+                </ul>
+            </li>
+            <li>Left-hand device
+                <ul>Uses a motor-driven mechanism to simulate the feeling of moving through space with
+                    a rope.
+                </ul>
+            </li>
+            <h3>Challenges</h3>
+            <li>Complex Project Collaboration
+                <ul>
+                    This was my first experience working on a large-scale collaborative
+                    project. Coordinating with a diverse team posed significant challenges, particularly in aligning our
+                    goals and managing our workflows.
+                </ul>
+            </li>
+            <li>Technical Integration
+                <ul>
+                    Developing seamless integration between the VR interface and the custom-built
+                    haptic feedback devices required extensive testing and adjustments to ensure real-time
+                    responsiveness and reliability.
+                </ul>
+            </li>
+            <h3>Solutions</h3>
+            <li>Effective Team Management
+                <ul>
+                    I learned valuable lessons in team collaboration, which involved detailed
+                    planning and division of labor. We held regular meetings to ensure all team members were aligned
+                    with the project's progress and challenges.
+                </ul>
+            </li>
+            <li>Iterative Testing and Development
+                <ul>
+                    We adopted an iterative approach to development, which allowed us
+                    to gradually integrate and refine the haptic feedback mechanisms as the project evolved. This
+                    approach helped us manage complexities in the VR and haptic feedback integration.
+                </ul>
+            </li>
+
+            <h3>Concrete Outcomes</h3>
+            <li>Award for Most Innovative Project
+                <ul>
+                    Our project was recognized for its innovation at the Innovation
+                    in Service competition, Asia-Pacific division.
+                </ul>
+            </li>
+            <li>Enhanced Player Immersion
+                <ul>
+                    The dual haptic feedback system significantly enhanced the realism and
+                    immersion of the VR escape game, leading to positive feedback from test users.
+                </ul>
+            </li>
+            <li>Skills Development
+                <ul>
+                    Gained substantial experience in VR development, hardware integration, and team
+                    management, which have been instrumental in my professional growth.
+                </ul>
+            </li>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-bottom">
+            © MINCHIH Portfolio 2024
+        </div>
+    </footer>
+
+</body>
+
+</html>
