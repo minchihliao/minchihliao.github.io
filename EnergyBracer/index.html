@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Richard - Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <!-- Font Awesome for social icons -->
+    <style>
+        /* Reset some default styles */
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100%;
+            /* Ensure the full height for smaller content */
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Header styles */
+        .header {
+            background-color: #000;
+            color: white;
+            padding: 20px;
+            text-align: left;
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 10%;
+        }
+
+        .nav-links {
+            list-style: none;
+            padding: 0;
+        }
+
+        .nav-links li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            font-weight: normal;
+        }
+
+        #logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        /* Portfolio styles */
+        .portfolio-title {
+            font-size: 2em;
+            text-align: center;
+            padding: 20px;
+            color: #000000;
+            /* If you want the title color to match the logo color */
+            font-weight: bold;
+            /* Makes the font weight bold */
+        }
+
+
+        .content-wrap {
+            flex: 1;
+            padding-bottom: 50px;
+            /* Add padding equal to the footer height to avoid content being hidden by the footer */
+        }
+
+        .project-title {
+            font-size: 4em;
+            text-align: center;
+            padding: 20px;
+            color: #000;
+            font-weight: bold;
+        }
+
+        .project-image {
+            display: flex;
+            justify-content: center;
+            /* Center images horizontally */
+            flex-wrap: wrap;
+            /* Allow wrapping */
+            margin: 5px 0;
+        }
+
+        .image-container {
+            width: 90%;
+            /* Set container width */
+            padding: 10px;
+            /* Padding around each image */
+            box-sizing: border-box;
+            /* Include padding in width calculation */
+            text-align: center;
+            /* Center the text below images */
+        }
+
+        .image-container img {
+            width: 90%;
+            /* Make images use up all container width */
+            height: auto;
+            /* Maintain aspect ratio */
+        }
+
+        .project-link {
+            display: block;
+            text-align: center;
+            margin: 20px 0;
+            font-size: 1.2em;
+        }
+
+        .project-overview ul li {
+            margin-top: 2px;
+            margin-bottom: 2px;
+            /* Reduced bottom margin for list items */
+            padding: 3px 0;
+            /* Small padding for better readability */
+        }
+
+        .project-overview ul {
+            margin-top: 2px;
+            /* Remove top margin to bring list closer to the preceding content */
+            margin-bottom: 5px;
+            /* Bottom margin to space out from the following content */
+            padding-left: 40px;
+            /* Adjust list indentation */
+        }
+
+        .project-overview h3 {
+            margin-top: 10px;
+            /* Add top margin if needed */
+            margin-bottom: 10px;
+            /* Reduced bottom margin */
+            font-size: 1.2em;
+            /* Adjust font size if desired */
+        }
+
+        .project-overview {
+            padding: 20px;
+            font-size: 1.2em;
+            line-height: 1.4;
+            text-align: left;
+            margin: 5px 8%;
+            margin-top: 1px;
+        }
+
+        /* Footer styles */
+        .footer {
+            background-color: #000;
+            color: white;
+            padding: 40px 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: space-around;
+            align-items: top;
+        }
+
+        .footer-column h3 {
+            color: #fff;
+            margin-bottom: 20px;
+        }
+
+        .footer-column p,
+        .footer-column a {
+            color: #aaa;
+            text-decoration: none;
+            margin-bottom: 10px;
+        }
+
+        .footer-column a:hover {
+            color: #fff;
+        }
+
+        .footer-bottom {
+            background-color: #111;
+            color: #aaa;
+            text-align: center;
+            padding: 50px 0;
+            font-size: 18px;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="content-wrap">
+        <!-- Header -->
+        <header class="header">
+            <div class="navigation">
+                <div id="logo">Richard Liao</div>
+                <nav>
+                    <ul class="nav-links">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="../Portfolio/index.html">Portfolio</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+
+        <!-- Project Details -->
+        <div class="project-title">Energy Bracer</div>
+        <div class="project-image">
+            <div class="image-container">
+                <img src="../EnergyBracer/assets/EnergyBracer.jpg" alt="Platform Start Screen">
+            </div>
+        </div>
+        <a href="https://www.youtube.com/watch?v=UIjTcWONK1s" target="_blank" class="project-link">
+            Visit the YouTube Video
+        </a>
+        <div class="project-overview">
+            <h3>Project Overview</h3>
+            The Energy Bracer project integrates virtual reality and tactile feedback technologies to create an
+            immersive gaming experience that simulates temperature changes through a phenomenon called Thermal
+            Diffusion. This technology was developed during my master's research and is central to enhancing sensory
+            feedback in VR environments.
+            <h3>Objective</h3>
+            <li>Innovation in VR
+                <ul>Develop a VR system that uses tactile feedback to enhance the gaming experience by
+                    simulating temperature changes.
+                </ul>
+            </li>
+            <li>Research Application
+                <ul>Apply findings from the study of human sensory responses to electrical and
+                    thermal
+                    stimuli in a practical VR application.
+                </ul>
+            </li>
+
+            <h3>Technologies Used</h3>
+            <li>Unity and C#: For VR game development.</li>
+            <li>HTC Vive: To provide an immersive VR experience.</li>
+            <li>Bluetooth Technology: For real-time device connectivity and feedback.</li>
+            <h3>Technical Details</h3>
+            <li>Device Engineering
+                <ul>
+                    The Energy Bracer is equipped with electrical and temperature stimulators. We uses minimal
+                    electrical currents to stimulate thermal diffusion, calibrated to user comfort based on our research
+                    findings.
+                </ul>
+            </li>
+            <li>Feedback Optimization
+                <ul>
+                    Provide the best thermal diffusion effect based on user survey to ensure an engaging and
+                    realistic experience.
+                </ul>
+            </li>
+            <h3>Challenges and Solutions</h3>
+            <li>Interdisciplinary Research
+                <ul>
+                    The project required a deep dive into human physiology to effectively
+                    integrate sensory feedback in VR. I expanded my knowledge base beyond my primary field of study,
+                    demonstrating my ability to tackle interdisciplinary challenges.
+                </ul>
+            </li>
+            <li>Sensory Calibration
+                <ul>
+                    Initial tests revealed that the temperature sensations induced by the Thermal Diffusion were not
+                    consistently perceivable by all users. To address this, I consulted extensive research on human
+                    thermal perception and conducted user feedback surveys to determine the most effective temperature
+                    ranges and electrical current settings for noticeable yet comfortable sensory feedback
+                </ul>
+            </li>
+
+            <h3>Concrete Results</h3>
+            <li>Enhanced Player Immersion
+                <ul>
+                    Players reported a significantly enhanced feeling of immersion and
+                    realism due to the tactile feedback provided by the Energy Bracer.
+                </ul>
+            </li>
+            <li>Academic Contribution
+                <ul>
+                    The project formed the basis of my master's thesis and contributed new
+                    insights into the application of tactile feedback technology in virtual reality.
+                </ul>
+            </li>
+            <h3>My Role and Contributions</h3>
+            <li>Lead Researcher and Developer
+                <ul>
+                    I was responsible for the initial concept, design, development, and
+                    testing of the Thermal Diffusion phenomenon and the Energy Bracer VR game.
+                </ul>
+            </li>
+            <li>Problem Solver
+                <ul>
+                    Addressed unique challenges related to sensory perception and feedback mechanisms by
+                    leveraging interdisciplinary research and user-centered design principles.
+                </ul>
+            </li>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-bottom">
+            © MINCHIH Portfolio 2024
+        </div>
+    </footer>
+
+</body>
+
+</html>
