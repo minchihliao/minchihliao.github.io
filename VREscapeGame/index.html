@@ -94,7 +94,7 @@
         }
 
         .image-container {
-            width: 90%;
+            width: 30%;
             /* Set container width */
             padding: 10px;
             /* Padding around each image */
@@ -105,11 +105,31 @@
         }
 
         .image-container img {
-            width: 90%;
+            width: 80%;
             /* Make images use up all container width */
             height: auto;
             /* Maintain aspect ratio */
         }
+
+        .video-container {
+            width: 60%;
+            /* Set the container width to 80% of its parent */
+            margin: 0 auto;
+            /* Center the container horizontally */
+            display: flex;
+            justify-content: center;
+            /* Center content horizontally */
+            align-items: center;
+            /* Center content vertically */
+        }
+
+        .video-container video {
+            width: 100%;
+            /* Make the video take up 100% of the .video-container's width */
+            height: auto;
+            /* Maintain aspect ratio */
+        }
+
 
         .project-link {
             display: block;
@@ -119,7 +139,6 @@
         }
 
         .project-overview ul li {
-            margin-top: 2px;
             margin-bottom: 2px;
             /* Reduced bottom margin for list items */
             padding: 3px 0;
@@ -127,7 +146,7 @@
         }
 
         .project-overview ul {
-            margin-top: 2px;
+            margin-top: 0px;
             /* Remove top margin to bring list closer to the preceding content */
             margin-bottom: 5px;
             /* Bottom margin to space out from the following content */
@@ -150,7 +169,6 @@
             line-height: 1.4;
             text-align: left;
             margin: 5px 8%;
-            margin-top: 1px;
         }
 
         /* Footer styles */
@@ -210,14 +228,13 @@
 
         <!-- Project Details -->
         <div class="project-title">VR Escape Game</div>
-        <div class="project-image">
-            <div class="image-container">
-                <img src="../EnergyBracer/assets/EnergyBracer.jpg" alt="Platform Start Screen">
-            </div>
+
+        <div class="video-container">
+            <video controls width="80%">
+                <source src="../VREscapeGame/assets/VREscapeGameVideo.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
         </div>
-        <a href="https://youtu.be/_9RWdG2iA6s" target="_blank" class="project-link">
-            Visit the YouTube Video
-        </a>
         <div class="project-overview">
             <h3>Project Overview</h3>
             This VR game casts players as a superhero navigating through a space prison. The objective is to escape by
